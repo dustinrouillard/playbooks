@@ -24,6 +24,7 @@
       - { id: 1295203466, name: "Microsoft Remote Desktop" }
       - { id: 1099568401, name: "Home Assistant" }
       - { id: 1455214828, name: "MQTT Explorer" }
+      - { id: 1438838068, name: "KubeContext" }
 
     homebrew_taps:
       - homebrew/core
@@ -43,8 +44,19 @@
       - httpie
       - yarn
       - pinentry-mac
+      - kubectl
+      - kubectx
       - python
+      - minio-mc
       - wget
+      - pgcli
+      - redis
+      - yt-dlp
+      - mtr
+      - websocat
+      - cloudflared
+      - docker-compose
+      - txn2/tap/kubefwd
 
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
@@ -56,7 +68,9 @@
       - docker
       - spotify
       - discord-canary
+      - google-cloud-sdk
       - visual-studio-code-insiders
+      - private-internet-access
       - 1password-beta
       - battery-buddy
 
@@ -84,6 +98,7 @@
       - vercel
       - miniflare
       - ts-node
+      - "@cloudflare/wrangler"
 
     pkg_downloads:
       - url: https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3.0.2.pkg
