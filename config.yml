@@ -102,6 +102,9 @@
       - ts-node
       - "@cloudflare/wrangler"
 
+    go_packages:
+      - github.com/cespare/reflex@latest
+
     pkg_downloads:
       - url: https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3.0.2.pkg
         name: dockutil-3.0.2.pkg
@@ -164,6 +167,8 @@
       tags: ["osx"]
     - import_tasks: tasks/node.yml
       tags: ["node"]
+    - import_tasks: tasks/go.yml
+      tags: ["go"]
     - import_tasks: tasks/pkg.yml
       tags: ["pkg"]
     - import_tasks: tasks/pmset.yml

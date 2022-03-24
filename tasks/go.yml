@@ -1,0 +1,8 @@
+---
+- name: Install global go packages
+  shell:
+    cmd: |
+      set -o pipefail
+      go install {{ item }} > /dev/null 2>&1
+    executable: /bin/bash
+  with_items: "{{ go_packages }}"
