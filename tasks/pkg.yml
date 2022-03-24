@@ -1,0 +1,11 @@
+---
+- name: Install pkg files from urls
+  become: true
+  shell:
+    cmd: |
+      set -o pipefail
+      cd {{ downloads }}
+      wget -nc {{ item.url }} -O {{ item.name }} > /dev/null 2>&1
+      sudo installer -pkg {{ item.name }} -target {{ item.target }} > /dev/null 2>&1
+    executable: /bin/bash
+  with_items: "{{ pkg_downloads }}"

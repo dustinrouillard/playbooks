@@ -1,0 +1,138 @@
+- hosts: localhost
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+      tags: ["homebrew"]
+    - role: geerlingguy.dotfiles
+      tags: ["dotfiles"]
+    - role: geerlingguy.mac.mas
+      when: mas_installed_apps or mas_installed_app_ids
+      tags: ["mas"]
+    - role: fubarhouse.macdock
+      tags: ["dock"]
+
+  vars:
+    downloads: /tmp
+
+    mas_installed_apps:
+      - { id: 497799835, name: "Xcode" }
+      - { id: 899247664, name: "TestFlight" }
+      - { id: 747648890, name: "Telegram" }
+      - { id: 1176895641, name: "Spark" }
+      - { id: 1579200037, name: "Medis 2" }
+      - { id: 1295203466, name: "Microsoft Remote Desktop" }
+      - { id: 1099568401, name: "Home Assistant" }
+      - { id: 1455214828, name: "MQTT Explorer" }
+
+    homebrew_taps:
+      - homebrew/core
+      - homebrew/cask
+      - homebrew/cask-versions
+
+    homebrew_installed_packages:
+      - neovim
+      - fnm
+      - fzf
+      - tmux
+      - htop
+      - neofetch
+      - skhd
+      - gpg
+      - jq
+      - httpie
+      - yarn
+      - pinentry-mac
+      - python
+      - wget
+
+    homebrew_cask_appdir: /Applications
+    homebrew_cask_apps:
+      - paw
+      - infra
+      - iterm2
+      - tiles
+      - firefox
+      - docker
+      - spotify
+      - discord-canary
+      - visual-studio-code-insiders
+      - 1password-beta
+      - battery-buddy
+
+    dotfiles_repo: git@github.com:dustinrouillard/dotfiles.git
+    dotfiles_repo_accept_hostkey: true
+    dotfiles_repo_version: mac
+    dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
+    dotfiles_files:
+      - .zshrc
+      - .zsh_funcs
+      - .gitconfig
+      - .profile
+      - .jwt
+      - .skhdrc
+      - .osx
+      - .gnupg/gpg-agent.conf
+      - .desktop-background.png
+
+    default_node_version: "16"
+    node_versions:
+      - "16"
+
+    node_global_packages:
+      - npm-check-updates
+      - vercel
+      - miniflare
+      - ts-node
+
+    pkg_downloads:
+      - url: https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3.0.2.pkg
+        name: dockutil-3.0.2.pkg
+        target: /
+
+    dockutil_install_path: /usr/local/bin/dockutil
+    dockitems_remove_all: true
+    dockitems_enabled:
+      - name: Firefox
+        path: "/Applications/Firefox.app"
+        pos: 1
+      - name: Spotify
+        path: "/Applications/Spotify.app"
+        pos: 2
+      - name: iTerm
+        path: "/Applications/iTerm.app"
+        pos: 3
+      - name: Discord Canary
+        path: "/Applications/Discord Canary.app"
+        pos: 4
+      - name: Visual Studio Code
+        path: "/Applications/Visual Studio Code - Insiders.app"
+        pos: 5
+      - name: Paw
+        path: "/Applications/Paw.app"
+        pos: 6
+      - name: 1Password
+        path: "/Applications/1Password.app"
+        pos: 7
+      - name: TablePlus
+        path: "/Applications/TablePlus.app"
+        pos: 8
+      - name: System Preferences
+        path: "/Applications/System Preferences.app"
+        pos: 9
+
+    pmset_options:
+      - name: displaysleep
+        value: 0
+
+    osx_script: "~/.osx"
+
+  tasks:
+    - import_tasks: tasks/osx.yml
+      tags: ["osx"]
+    - import_tasks: tasks/node.yml
+      tags: ["node"]
+    - import_tasks: tasks/pkg.yml
+      tags: ["pkg"]
+    - import_tasks: tasks/pmset.yml
+      tags: ["pmset"]

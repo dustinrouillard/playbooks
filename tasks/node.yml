@@ -1,0 +1,27 @@
+---
+- name: Install node via fnm
+  shell:
+    cmd: |
+      set -o pipefail
+      eval "$(fnm env)"
+      fnm install {{ item }}
+    executable: /bin/bash
+  with_items: "{{ node_versions }}"
+
+- name: Set default node version with fnm
+  shell:
+    cmd: |
+      set -o pipefail
+      eval "$(fnm env)"
+      fnm use {{ default_node_version }} > /dev/null 2>&1
+      readlink -f $(command -v node) | sed  -E "s%/node$%%g"
+    executable: /bin/bash
+
+- name: Install global node packages
+  shell:
+    cmd: |
+      set -o pipefail
+      eval "$(fnm env)"
+      yarn global add {{ item }} > /dev/null 2>&1
+    executable: /bin/bash
+  with_items: "{{ node_global_packages }}"

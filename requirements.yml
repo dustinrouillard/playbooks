@@ -1,0 +1,9 @@
+---
+roles:
+  - name: elliotweiser.osx-command-line-tools
+  - name: geerlingguy.dotfiles
+  - name: hurricanehrndz.fnm
+  - name: fubarhouse.macdock
+
+collections:
+  - name: geerlingguy.mac
