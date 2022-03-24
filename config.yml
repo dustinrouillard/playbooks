@@ -24,7 +24,6 @@
       - { id: 1295203466, name: "Microsoft Remote Desktop" }
       - { id: 1099568401, name: "Home Assistant" }
       - { id: 1455214828, name: "MQTT Explorer" }
-      - { id: 1438838068, name: "KubeContext" }
 
     homebrew_taps:
       - homebrew/core
@@ -64,6 +63,7 @@
       - infra
       - iterm2
       - tiles
+      - kubecontext
       - firefox
       - docker
       - spotify
