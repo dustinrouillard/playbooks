@@ -2,6 +2,25 @@
 
 This is the playbook I run whenever I setup a new mac, or decide to reinstall my OS.
 
+## Installation
+
+Running this playbook is reletively simple, just have to install ansible and homebrew.
+
+- Install homebrew \
+  `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+- Install ansible \
+  `brew install ansible`
+
+- Clone this repository \
+  `git clone https://github.com/dustinrouillard/playbooks -b mac`
+
+- Install ansible requirements \
+  `ansible-galaxy install -r requirements.yml`
+
+- cd into the cloned directory and run playbook \
+  `ansible-playbook config.yml -K`
+
 ## Tasks
 
 - Installs all the appstore apps I normally use
