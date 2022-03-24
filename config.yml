@@ -47,6 +47,7 @@
       - kubectx
       - python
       - minio-mc
+      - elixir
       - wget
       - pgcli
       - redis
