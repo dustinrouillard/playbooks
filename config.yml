@@ -54,6 +54,7 @@
       - redis
       - yt-dlp
       - mtr
+      - doctl
       - websocat
       - cloudflared
       - docker-compose
