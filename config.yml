@@ -129,33 +129,36 @@
       - name: Home Assistant
         path: "/Applications/Home Assistant.app"
         pos: 5
+      - name: Home
+        path: "/Applications/Home.app"
+        pos: 6
       - name: Spark
         path: "/Applications/Spark.app"
-        pos: 6
+        pos: 7
       - name: Medis
         path: "/Applications/Medis.app"
-        pos: 7
+        pos: 8
       - name: Infra
         path: "/Applications/Infra.app"
-        pos: 8
+        pos: 9
       - name: Visual Studio Code
         path: "/Applications/Visual Studio Code - Insiders.app"
-        pos: 9
+        pos: 10
       - name: 1Password
         path: "/Applications/1Password.app"
-        pos: 10
+        pos: 11
       - name: Telegram
         path: "/Applications/Telegram.app"
-        pos: 11
+        pos: 12
       - name: Paw
         path: "/Applications/Paw.app"
-        pos: 12
+        pos: 13
       - name: TablePlus
         path: "/Applications/TablePlus.app"
-        pos: 13
+        pos: 14
       - name: System Preferences
         path: "/Applications/System Preferences.app"
-        pos: 14
+        pos: 15
 
     pmset_options:
       - name: displaysleep
