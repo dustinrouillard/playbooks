@@ -88,6 +88,7 @@
       - .jwt
       - .skhdrc
       - .osx
+      - .hushlogin
       - .gnupg/gpg-agent.conf
       - .desktop-background.png
 
