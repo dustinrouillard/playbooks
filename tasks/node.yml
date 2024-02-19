@@ -17,11 +17,20 @@
       readlink -f $(command -v node) | sed  -E "s%/node$%%g"
     executable: /bin/bash
 
-- name: Install global node packages
+- name: Install global npm packages
   shell:
     cmd: |
       set -o pipefail
-      eval "$(fnm env)"
-      yarn global add {{ item }} > /dev/null 2>&1
-    executable: /bin/bash
-  with_items: "{{ node_global_packages }}"
+      source ~/.zshrc
+      npm install -g {{ item }} > /dev/null 2>&1
+    executable: /bin/zsh
+  with_items: "{{ npm_global_packages }}"
+
+- name: Install global pnpm packages
+  shell:
+    cmd: |
+      set -o pipefail
+      source ~/.zshrc
+      pnpm install -g {{ item }}
+    executable: /bin/zsh
+  with_items: "{{ pnpm_global_packages }}"

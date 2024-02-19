@@ -1,0 +1,25 @@
+---
+- name: Check for paru binary
+  register: parucheck
+  ansible.builtin.stat:
+    path: /usr/bin/paru
+
+- name: Install paru
+  when: not parucheck.stat.exists
+  block:
+    - name: Clone the paru repository
+      ansible.builtin.git:
+        repo: https://aur.archlinux.org/paru.git
+        dest: /tmp/paru
+        bare: true
+
+    - name: Build and install paru using makepkg
+      ansible.builtin.command:
+        cmd: makepkg -si
+        chdir: /tmp/paru
+        creates: /usr/bin/paru
+
+    - name: Remove the temporary folder for paru
+      ansible.builtin.file:
+        state: absent
+        path: /tmp/paru

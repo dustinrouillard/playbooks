@@ -1,0 +1,6 @@
+---
+- name: Ensure configured aur packages are installed.
+  kewlfft.aur.aur:
+    use: paru
+    name: "{{ item.name | default(item) }}"
+  loop: "{{ aur_packages }}"

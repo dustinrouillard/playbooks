@@ -1,9 +1,0 @@
----
-- name: Change system settings
-  become: true
-  shell:
-    cmd: |
-      set -o pipefail
-      sudo pmset -a {{ item.name }} {{ item.value }}
-    executable: /bin/bash
-  with_items: "{{ pmset_options }}"
