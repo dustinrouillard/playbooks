@@ -1,9 +1,5 @@
 - hosts: localhost
 
-  roles:
-    - role: geerlingguy.dotfiles
-      tags: ["dotfiles"]
-
   vars:
     pacman_packages:
       - base-devel
@@ -56,7 +52,10 @@
       - .zsh_alias
       - .gitconfig
       - .bin
-      - .local
+      - .local/share/applications/firefox.desktop
+      - .local/share/applications/com.obsproject.Studio.desktop
+      - .local/share/applications/com.obsproject.Studio-story.desktop
+      - .mozilla/firefox/dstn.default/user.js
       - .xbindkeysrc
       - .hushlogin
 
@@ -76,6 +75,14 @@
 
     go_packages:
       - github.com/cespare/reflex@latest
+
+  pre_tasks:
+    - import_tasks: tasks/pre_dotfiles.yml
+      tags: ["dotfiles"]
+
+  roles:
+    - role: geerlingguy.dotfiles
+      tags: ["dotfiles"]
 
   tasks:
     - import_tasks: tasks/pacman.yml

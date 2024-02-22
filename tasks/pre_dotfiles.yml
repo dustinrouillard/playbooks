@@ -1,0 +1,6 @@
+---
+- name: Make sure mozilla profile directory exists
+  ansible.builtin.file:
+    path: ~/.mozilla/firefox/dstn.default
+    state: directory
+    mode: 0700
