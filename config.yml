@@ -52,6 +52,7 @@
       - .zsh_alias
       - .gitconfig
       - .bin
+      - .config/kitty/kitty.conf
       - .local/share/applications/firefox.desktop
       - .local/share/applications/com.obsproject.Studio.desktop
       - .local/share/applications/com.obsproject.Studio-story.desktop
