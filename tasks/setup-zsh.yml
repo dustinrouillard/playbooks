@@ -1,0 +1,27 @@
+---
+- name: Check if .oh-my-zsh exists
+  ansible.builtin.stat:
+    path: ~/.oh-my-zsh
+  register: oh_my_zsh_result
+
+- name: Cloning oh-my-zsh
+  ansible.builtin.git:
+    repo: https://github.com/robbyrussell/oh-my-zsh
+    dest: ~/.oh-my-zsh
+  when: not oh_my_zsh_result.stat.exists
+
+- name: Check if zsh-syntax-highlighting plugin exists
+  stat:
+    path: ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+  register: zsh_syntax_highlighting_result
+
+- name: Cloning zsh-syntax-highlighting plugin into oh-my-zsh folder
+  git: repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest=~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+  when: not zsh_syntax_highlighting_result.stat.exists
+
+- name: Change user shell to zsh
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /bin/zsh
+  become: true
