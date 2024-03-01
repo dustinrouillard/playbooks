@@ -27,12 +27,17 @@
       - tmux
       - neovim
       - neofetch
-      - xbindkeys
       - websocat
       - yt-dlp
       - cloudflared
       - bluez
       - bluez-utils
+
+      - waynergy
+      - xorg-xwayland-explicit-sync-git
+
+      - spectacle
+      - wl-clipboard
 
       - htop
       - gtop
@@ -58,11 +63,11 @@
       - .gitconfig
       - .bin
       - .config/kitty/kitty.conf
+      - .local/share/applications/discord-canary.desktop
       - .local/share/applications/com.obsproject.Studio.desktop
       - .local/share/applications/com.obsproject.Studio-story.desktop
       - .mozilla/firefox/dstn.default/user.js
       - .mozilla/firefox/profiles.ini
-      - .xbindkeysrc
       - .hushlogin
 
     default_node_version: "20"
