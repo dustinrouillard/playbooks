@@ -4,3 +4,22 @@
     path: ~/.mozilla/firefox/dstn.default
     state: directory
     mode: 0700
+
+- name: Make sure the xsettingsd config directory exists
+  ansible.builtin.file:
+    path: ~/.config/xsettingsd
+    state: directory
+    mode: 0700
+
+- name: Make sure the albert config directory exists
+  ansible.builtin.file:
+    path: ~/.config/albert/websearch
+    state: directory
+    recurse: true
+    mode: 0700
+
+- name: Make sure the waynergy config directory exists
+  ansible.builtin.file:
+    path: ~/.config/waynergy
+    state: directory
+    mode: 0700

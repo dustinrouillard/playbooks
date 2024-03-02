@@ -62,7 +62,11 @@
       - .zshrc.d
       - .gitconfig
       - .bin
+      - .config/albert.conf
+      - .config/albert/websearch/engines.json
       - .config/kitty/kitty.conf
+      - .config/waynergy/config.ini
+      - .local/share/applications/screenshot.desktop
       - .local/share/applications/discord-canary.desktop
       - .local/share/applications/com.obsproject.Studio.desktop
       - .local/share/applications/com.obsproject.Studio-story.desktop
