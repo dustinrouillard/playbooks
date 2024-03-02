@@ -1,5 +1,6 @@
 - hosts: localhost
   connection: local
+  gather_facts: false
 
   vars:
     pacman_packages:
@@ -66,6 +67,7 @@
       - .config/albert/websearch/engines.json
       - .config/kitty/kitty.conf
       - .config/waynergy/config.ini
+      - .local/share/applications/albert.desktop
       - .local/share/applications/screenshot.desktop
       - .local/share/applications/discord-canary.desktop
       - .local/share/applications/com.obsproject.Studio.desktop
@@ -91,6 +93,90 @@
     go_packages:
       - github.com/cespare/reflex@latest
 
+    kde_globals:
+      main:
+        - name: Copy
+          keys:
+            - Meta+C
+            - Ctrl+Ins
+            - Ctrl+C
+        - name: Cut
+          keys:
+            - Meta+X
+            - Ctrl+X
+        - name: Paste
+          keys:
+            - Meta+V
+            - Ctrl+V
+        - name: Find
+          keys:
+            - Meta+F
+            - Ctrl+F
+        - name: New
+          keys:
+            - Meta+N
+            - Ctrl+N
+        - name: Redo
+          keys:
+            - Meta+Y
+            - Ctrl+Shift+Y
+            - Ctrl+Shift+Z
+        - name: Save
+          keys:
+            - Meta+S
+            - Ctrl+S
+        - name: SelectAll
+          keys:
+            - Meta+A
+            - Ctrl+A
+        - name: Undo
+          keys:
+            - Meta+U
+            - Ctrl+U
+        - name: KeyBindings
+          state: unbound
+        - name: Preferences
+          state: unbound
+        - name: WhatsThis
+          state: unbound
+        - name: Help
+          state: unbound
+      shortcuts:
+        - name: services,org.kde.spectacle.desktop
+          keys:
+            - name: ActiveWindowScreenShot
+            - name: FullScreenScreenShot
+            - name: RecordRegion
+            - name: RecordScreen
+            - name: RecordWindow
+            - name: RectangularRegionScreenShot
+            - name: WindowUnderCursorScreenShot
+            - name: _launch
+        - name: plasmashell
+          keys:
+            - name: next activity
+              value: "none,Meta+Tab,Walk through activities"
+        - name: plasmashell
+          keys:
+            - name: previous activity
+              value: "none,Meta+Shift+Tab,Walk through activities (Reverse)"
+        - name: plasmashell
+          keys:
+            - name: manage activities
+              value: "none,Meta+Q,Show Activity Switcher"
+        - name: kaccess
+          keys:
+            - name: Toggle Screen Reader On and Off
+              value: "none,Meta+Alt+S,Toggle Screen Reader On and Off"
+        - name: kwin
+          keys:
+            - name: Walk Through Windows Alternative
+              value: "Meta+Tab,,Walk Through Windows Alternative"
+        - name: kwin
+          keys:
+            - name: Walk Through Windows Alternative (Reverse)
+              value: "Meta+Shift+Tab,,Walk Through Windows Alternative (Reverse)"
+
   pre_tasks:
     - import_tasks: tasks/setup-zsh.yml
       tags: ["zsh"]
@@ -114,3 +200,5 @@
       tags: ["go"]
     - import_tasks: tasks/bluetooth.yml
       tags: ["bluetooth"]
+    - import_tasks: tasks/kde.yml
+      tags: ["kde"]

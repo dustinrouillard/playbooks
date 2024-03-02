@@ -1,0 +1,30 @@
+---
+- name: Setup kglobalshortcut mappings
+  realorangeone.kconfig.kconfig:
+    file: kglobalshortcutsrc
+    group: "{{ item.0.name }}"
+    key: "{{ item.1.name }}"
+    value: "{{ item.1.value|default('none') }}"
+  with_subelements:
+    - "{{kde_globals.shortcuts}}"
+    - keys
+  loop_control:
+    label: "name={{ item.0.name }} key={{ item.1.name }}"
+
+- name: Setup kdeglobal mappings
+  community.general.ini_file:
+    path: ~/.config/kdeglobals
+    section: Shortcuts
+    option: "{{ item.name }}"
+    value: "{{ item['keys'] | default([]) | map('string') | join('; ') if 'keys' in item and (item.state is not defined or item.state != 'unbound') else '' }}"
+    state: present
+    no_extra_spaces: true
+  loop: "{{ kde_globals.main }}"
+  loop_control:
+    label: "name={{ item.name }} binds={{ item['keys'] | default([]) | map('string') | join(', ') if 'keys' in item else 'none' }}"
+
+- name: Restart plasmashell
+  ansible.builtin.systemd_service:
+    name: plasma-plasmashell
+    state: restarted
+    scope: user
