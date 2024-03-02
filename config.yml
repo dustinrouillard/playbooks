@@ -176,6 +176,23 @@
           keys:
             - name: Walk Through Windows Alternative (Reverse)
               value: "Meta+Shift+Tab,,Walk Through Windows Alternative (Reverse)"
+      inputs:
+        - name: RepeatDelay
+          section: Keyboard
+          value: 180
+        - name: RepeatRate
+          section: Keyboard
+          value: 20
+        - name: cursorSize
+          section: Mouse
+          value: 18
+      plasmanotify:
+        - name: WhenScreenSharing
+          section: DoNotDisturb
+          value: "false"
+        - name: PopupPosition
+          section: Notifications
+          value: BottomRight
 
   pre_tasks:
     - import_tasks: tasks/setup-zsh.yml

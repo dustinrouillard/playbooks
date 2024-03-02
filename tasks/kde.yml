@@ -23,6 +23,30 @@
   loop_control:
     label: "name={{ item.name }} binds={{ item['keys'] | default([]) | map('string') | join(', ') if 'keys' in item else 'none' }}"
 
+- name: Setup kcminput mappings
+  community.general.ini_file:
+    path: ~/.config/kcminputrc
+    section: "{{ item.section }}"
+    option: "{{ item.name }}"
+    value: "{{ item.value }}"
+    state: present
+    no_extra_spaces: true
+  loop: "{{ kde_globals.inputs }}"
+  loop_control:
+    label: "name={{ item.name }} section={{ item.section }}"
+
+- name: Setup plasmanotify mappings
+  community.general.ini_file:
+    path: ~/.config/plasmanotifyrc
+    section: "{{ item.section }}"
+    option: "{{ item.name }}"
+    value: "{{ item.value }}"
+    state: present
+    no_extra_spaces: true
+  loop: "{{ kde_globals.plasmanotify }}"
+  loop_control:
+    label: "name={{ item.name }} section={{ item.section }}"
+
 - name: Restart plasmashell
   ansible.builtin.systemd_service:
     name: plasma-plasmashell
