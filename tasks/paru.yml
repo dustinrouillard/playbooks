@@ -11,7 +11,6 @@
       ansible.builtin.git:
         repo: https://aur.archlinux.org/paru.git
         dest: /tmp/paru
-        bare: true
 
     - name: Build and install paru using makepkg
       ansible.builtin.command:
