@@ -1,6 +1,6 @@
 - hosts: localhost
   connection: local
-  gather_facts: false
+  gather_facts: true
 
   vars:
     pacman_packages:
@@ -57,7 +57,7 @@
     dotfiles_repo: git@github.com:dustinrouillard/dotfiles.git
     dotfiles_repo_accept_hostkey: true
     dotfiles_repo_version: arch
-    dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
+    dotfiles_repo_local_destination: "/home/{{ lookup('env', 'USER') }}/Projects/Personal/dotfiles"
     dotfiles_files:
       - .zshrc
       - .zshrc.d
@@ -94,6 +94,9 @@
       - github.com/cespare/reflex@latest
 
     kde_globals:
+      accel:
+        - .local/share/applications/screenshot.desktop
+        - .local/share/applications/albert.desktop
       main:
         - name: Copy
           keys:
@@ -176,6 +179,16 @@
           keys:
             - name: Walk Through Windows Alternative (Reverse)
               value: "Meta+Shift+Tab,,Walk Through Windows Alternative (Reverse)"
+        - name: service,org.kde.krunner.desktop
+          keys:
+            - name: RunClipboard
+            - name: _launch
+        - name: service,org.kde.plasma.emojier.desktop
+          keys:
+            - name: _launch
+        - name: service,org.kde.konsole.desktop
+          keys:
+            - name: _launch
       inputs:
         - name: RepeatDelay
           section: Keyboard
