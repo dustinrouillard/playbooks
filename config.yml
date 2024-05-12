@@ -27,7 +27,7 @@
       - fzf
       - tmux
       - neovim
-      - neofetch
+      - fastfetch
       - websocat
       - yt-dlp
       - cloudflared
