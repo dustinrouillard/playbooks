@@ -1,4 +1,9 @@
 ---
+- name: Install zsh
+  community.general.pacman:
+    name: zsh
+  become: true
+
 - name: Check if .oh-my-zsh exists
   ansible.builtin.stat:
     path: ~/.oh-my-zsh
