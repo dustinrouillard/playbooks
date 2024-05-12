@@ -14,7 +14,7 @@
 
     - name: Build and install paru using makepkg
       ansible.builtin.command:
-        cmd: makepkg -si
+        cmd: makepkg -si --noconfirm
         chdir: /tmp/paru
         creates: /usr/bin/paru
 
