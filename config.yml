@@ -23,12 +23,12 @@
       - { id: 1579200037, name: "Medis 2" }
       - { id: 1295203466, name: "Microsoft Remote Desktop" }
       - { id: 1099568401, name: "Home Assistant" }
+      - { id: 1136220934, name: "Infuse" }
       - { id: 1455214828, name: "MQTT Explorer" }
 
     homebrew_taps:
-      - homebrew/core
-      - homebrew/cask
-      - homebrew/cask-versions
+      - txn2/tap
+      - koekeishiya/formulae
 
     homebrew_installed_packages:
       - neovim
@@ -36,7 +36,7 @@
       - fzf
       - tmux
       - htop
-      - neofetch
+      - fastfetch
       - skhd
       - gpg
       - jq
@@ -62,19 +62,19 @@
 
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
+      - kitty
       - paw
-      - infra
-      - iterm2
+      - aptakube
       - tiles
       - kubecontext
       - firefox
       - docker
       - spotify
-      - discord-canary
+      - discord@canary
       - google-cloud-sdk
-      - visual-studio-code-insiders
+      - visual-studio-code@insiders
       - private-internet-access
-      - 1password-beta
+      - 1password
       - battery-buddy
 
     dotfiles_repo: git@github.com:dustinrouillard/dotfiles.git
@@ -121,8 +121,8 @@
       - name: Spotify
         path: "/Applications/Spotify.app"
         pos: 2
-      - name: iTerm
-        path: "/Applications/iTerm.app"
+      - name: Kitty
+        path: "/Applications/Kitty.app"
         pos: 3
       - name: Discord Canary
         path: "/Applications/Discord Canary.app"
@@ -139,8 +139,8 @@
       - name: Medis
         path: "/Applications/Medis.app"
         pos: 8
-      - name: Infra
-        path: "/Applications/Infra.app"
+      - name: Aptakube
+        path: "/Applications/Aptakube.app"
         pos: 9
       - name: Visual Studio Code
         path: "/Applications/Visual Studio Code - Insiders.app"
@@ -158,8 +158,11 @@
         path: "/Applications/TablePlus.app"
         pos: 14
       - name: System Preferences
-        path: "/Applications/System Preferences.app"
+        path: "/Applications/System Settings.app"
         pos: 15
+      - name: Infuse
+        path: "/Applications/Infuse.app"
+        pos: 16
 
     pmset_options:
       - name: displaysleep
