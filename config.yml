@@ -63,6 +63,7 @@
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
       - kitty
+      - zed
       - paw
       - aptakube
       - tiles
@@ -70,6 +71,7 @@
       - firefox
       - docker
       - spotify
+      - obsidian
       - discord@canary
       - google-cloud-sdk
       - visual-studio-code@insiders
@@ -83,10 +85,11 @@
     dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
     dotfiles_files:
       - .zshrc
-      - .zsh_funcs
+      - .zshrc.d
       - .gitconfig
       - .profile
       - .jwt
+      - .bin
       - .skhdrc
       - .osx
       - .hushlogin
