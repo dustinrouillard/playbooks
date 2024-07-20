@@ -78,6 +78,7 @@
       - private-internet-access
       - 1password
       - battery-buddy
+      - font-intel-one-mono
 
     dotfiles_repo: git@github.com:dustinrouillard/dotfiles.git
     dotfiles_repo_accept_hostkey: true
