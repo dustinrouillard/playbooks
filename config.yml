@@ -63,8 +63,6 @@
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
       - kitty
-      - zed
-      - paw
       - utm
       - aptakube
       - tiles
@@ -147,8 +145,8 @@
       - name: Aptakube
         path: "/Applications/Aptakube.app"
         pos: 9
-      - name: Visual Studio Code
-        path: "/Applications/Visual Studio Code - Insiders.app"
+      - name: Zed
+        path: "/Applications/Zed.app"
         pos: 10
       - name: 1Password
         path: "/Applications/1Password.app"
