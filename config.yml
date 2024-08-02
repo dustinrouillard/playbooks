@@ -31,6 +31,7 @@
       - koekeishiya/formulae
 
     homebrew_installed_packages:
+      - bruno
       - neovim
       - fnm
       - fzf
@@ -64,6 +65,7 @@
     homebrew_cask_apps:
       - kitty
       - utm
+      - infra
       - aptakube
       - tiles
       - kubecontext
@@ -145,27 +147,30 @@
       - name: Aptakube
         path: "/Applications/Aptakube.app"
         pos: 9
+      - name: Infra
+        path: "/Applications/Infra.app"
+        pos: 10
       - name: Zed
         path: "/Applications/Zed.app"
-        pos: 10
+        pos: 11
       - name: 1Password
         path: "/Applications/1Password.app"
-        pos: 11
+        pos: 12
       - name: Telegram
         path: "/Applications/Telegram.app"
-        pos: 12
-      - name: Paw
-        path: "/Applications/Paw.app"
         pos: 13
+      - name: Bruno
+        path: "/Applications/Bruno.app"
+        pos: 14
       - name: TablePlus
         path: "/Applications/TablePlus.app"
-        pos: 14
+        pos: 15
       - name: System Preferences
         path: "/Applications/System Settings.app"
-        pos: 15
+        pos: 16
       - name: Infuse
         path: "/Applications/Infuse.app"
-        pos: 16
+        pos: 17
 
     pmset_options:
       - name: displaysleep
