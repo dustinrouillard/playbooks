@@ -96,11 +96,12 @@
       - .osx
       - .hushlogin
       - .gnupg/gpg-agent.conf
+      - .config/atuin
       - .desktop-background.png
 
-    default_node_version: "16"
+    default_node_version: "21"
     node_versions:
-      - "16"
+      - "21"
 
     node_global_packages:
       - npm-check-updates
