@@ -63,6 +63,7 @@
       - .zshrc.d
       - .gitconfig
       - .bin
+      - .config/atuin
       - .config/albert.conf
       - .config/albert/websearch/engines.json
       - .config/kitty/kitty.conf
@@ -76,9 +77,9 @@
       - .mozilla/firefox/profiles.ini
       - .hushlogin
 
-    default_node_version: "20"
+    default_node_version: "21"
     node_versions:
-      - "20"
+      - "21"
 
     npm_global_packages:
       - pnpm
