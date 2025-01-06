@@ -20,18 +20,14 @@
       - { id: 899247664, name: "TestFlight" }
       - { id: 747648890, name: "Telegram" }
       - { id: 1176895641, name: "Spark" }
-      - { id: 1579200037, name: "Medis 2" }
-      - { id: 1295203466, name: "Microsoft Remote Desktop" }
-      - { id: 1099568401, name: "Home Assistant" }
       - { id: 1136220934, name: "Infuse" }
-      - { id: 1455214828, name: "MQTT Explorer" }
 
     homebrew_taps:
       - txn2/tap
       - koekeishiya/formulae
 
-    homebrew_installed_packages:
-      - bruno
+    homebrew_inistalled_packages:
+      - zoxide
       - neovim
       - fnm
       - fzf
@@ -42,11 +38,13 @@
       - gpg
       - jq
       - go
+      - gh
       - httpie
-      - yarn
       - pinentry-mac
-      - kubectl
+      - cilium-cli
+      - kubernetes-cli
       - kubectx
+      - kubefwd
       - python
       - minio-mc
       - elixir
@@ -57,28 +55,38 @@
       - mtr
       - doctl
       - websocat
+      - minicom
       - cloudflared
+      - vercel-cli
+      - wireguard-tools
       - docker-compose
       - txn2/tap/kubefwd
 
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
-      - kitty
+      - ghostty
+      - yaak
       - utm
+      - iina
       - infra
       - aptakube
       - tiles
       - kubecontext
-      - firefox
+      - zed
+      - zen-browser
       - docker
       - spotify
       - obsidian
       - discord@canary
-      - google-cloud-sdk
       - visual-studio-code@insiders
       - private-internet-access
       - 1password
+      - 1password-cli
       - battery-buddy
+      - balenaetcher
+      - figma
+      - qflipper
+      - philips-hue-sync
       - font-intel-one-mono
 
     dotfiles_repo: git@github.com:dustinrouillard/dotfiles.git
@@ -96,8 +104,7 @@
       - .osx
       - .hushlogin
       - .gnupg/gpg-agent.conf
-      - .config/atuin
-      - .desktop-background.png
+      - .config/ghostty
 
     default_node_version: "21"
     node_versions:
@@ -105,9 +112,8 @@
 
     node_global_packages:
       - npm-check-updates
-      - vercel
-      - miniflare
       - ts-node
+      - pnpm
       - "@cloudflare/wrangler"
 
     go_packages:
@@ -121,57 +127,51 @@
     dockutil_install_path: /usr/local/bin/dockutil
     dockitems_remove_all: true
     dockitems_enabled:
-      - name: Firefox
-        path: "/Applications/Firefox.app"
+      - name: Zen Browser
+        path: "/Applications/Zen Browser.app"
         pos: 1
       - name: Spotify
         path: "/Applications/Spotify.app"
         pos: 2
-      - name: Kitty
-        path: "/Applications/Kitty.app"
+      - name: Ghostty
+        path: "/Applications/Ghostty.app"
         pos: 3
       - name: Discord Canary
         path: "/Applications/Discord Canary.app"
         pos: 4
-      - name: Home Assistant
-        path: "/Applications/Home Assistant.app"
-        pos: 5
       - name: Home
         path: "/Applications/Home.app"
-        pos: 6
+        pos: 5
       - name: Spark
         path: "/Applications/Spark.app"
-        pos: 7
-      - name: Medis
-        path: "/Applications/Medis.app"
-        pos: 8
+        pos: 6
       - name: Aptakube
         path: "/Applications/Aptakube.app"
-        pos: 9
+        pos: 7
       - name: Infra
         path: "/Applications/Infra.app"
-        pos: 10
+        pos: 8
       - name: Zed
         path: "/Applications/Zed.app"
-        pos: 11
+        pos: 9
       - name: 1Password
         path: "/Applications/1Password.app"
-        pos: 12
+        pos: 10
       - name: Telegram
         path: "/Applications/Telegram.app"
-        pos: 13
-      - name: Bruno
-        path: "/Applications/Bruno.app"
-        pos: 14
+        pos: 11
+      - name: Yaak
+        path: "/Applications/Yaak.app"
+        pos: 12
       - name: TablePlus
         path: "/Applications/TablePlus.app"
-        pos: 15
+        pos: 13
       - name: System Preferences
         path: "/Applications/System Settings.app"
-        pos: 16
+        pos: 14
       - name: Infuse
         path: "/Applications/Infuse.app"
-        pos: 17
+        pos: 15
 
     pmset_options:
       - name: displaysleep
