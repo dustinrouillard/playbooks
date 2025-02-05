@@ -26,7 +26,7 @@
       - txn2/tap
       - koekeishiya/formulae
 
-    homebrew_inistalled_packages:
+    homebrew_installed_packages:
       - zoxide
       - neovim
       - fnm
@@ -61,6 +61,7 @@
       - wireguard-tools
       - docker-compose
       - txn2/tap/kubefwd
+      - helmfile
 
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
@@ -80,7 +81,7 @@
       - discord@canary
       - visual-studio-code@insiders
       - private-internet-access
-      - 1password
+      - 1password@nightly
       - 1password-cli
       - battery-buddy
       - balenaetcher
