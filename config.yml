@@ -62,6 +62,8 @@
       - docker-compose
       - txn2/tap/kubefwd
       - helmfile
+      - sops
+      - age
 
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
