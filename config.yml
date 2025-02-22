@@ -91,6 +91,7 @@
       - qflipper
       - philips-hue-sync
       - font-intel-one-mono
+      - slack@beta
 
     dotfiles_repo: git@github.com:dustinrouillard/dotfiles.git
     dotfiles_repo_accept_hostkey: true
