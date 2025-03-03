@@ -131,29 +131,29 @@
     dockutil_install_path: /usr/local/bin/dockutil
     dockitems_remove_all: true
     dockitems_enabled:
-      - name: Zen Browser
-        path: "/Applications/Zen Browser.app"
-        pos: 1
       - name: Spotify
         path: "/Applications/Spotify.app"
-        pos: 2
+        pos: 1
       - name: Ghostty
         path: "/Applications/Ghostty.app"
-        pos: 3
+        pos: 2
       - name: Discord Canary
         path: "/Applications/Discord Canary.app"
-        pos: 4
+        pos: 3
       - name: Home
         path: "/Applications/Home.app"
-        pos: 5
+        pos: 4
       - name: Spark
         path: "/Applications/Spark.app"
-        pos: 6
+        pos: 5
       - name: Aptakube
         path: "/Applications/Aptakube.app"
-        pos: 7
+        pos: 6
       - name: Infra
         path: "/Applications/Infra.app"
+        pos: 7
+      - name: Zen Browser
+        path: "/Applications/Zen Browser.app"
         pos: 8
       - name: Zed
         path: "/Applications/Zed.app"
