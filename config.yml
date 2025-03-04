@@ -76,6 +76,7 @@
       - tiles
       - kubecontext
       - zed
+      - zed@preview
       - zen-browser
       - docker
       - spotify
@@ -155,8 +156,8 @@
       - name: Zen Browser
         path: "/Applications/Zen Browser.app"
         pos: 8
-      - name: Zed
-        path: "/Applications/Zed.app"
+      - name: Zed Preview
+        path: "/Applications/Zed Preview.app"
         pos: 9
       - name: 1Password
         path: "/Applications/1Password.app"
