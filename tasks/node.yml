@@ -22,6 +22,6 @@
     cmd: |
       set -o pipefail
       eval "$(fnm env)"
-      yarn global add {{ item }} > /dev/null 2>&1
+      npm install -g {{ item }} > /dev/null 2>&1
     executable: /bin/bash
   with_items: "{{ node_global_packages }}"

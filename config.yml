@@ -71,7 +71,6 @@
       - yaak
       - utm
       - iina
-      - infra
       - aptakube
       - tiles
       - kubecontext
@@ -119,7 +118,6 @@
       - npm-check-updates
       - ts-node
       - pnpm
-      - "@cloudflare/wrangler"
 
     go_packages:
       - github.com/cespare/reflex@latest
@@ -150,36 +148,33 @@
       - name: Aptakube
         path: "/Applications/Aptakube.app"
         pos: 6
-      - name: Infra
-        path: "/Applications/Infra.app"
+      - name: Zen
+        path: "/Applications/Zen.app"
         pos: 7
-      - name: Zen Browser
-        path: "/Applications/Zen Browser.app"
-        pos: 8
       - name: Zed Preview
         path: "/Applications/Zed Preview.app"
-        pos: 9
+        pos: 8
       - name: 1Password
         path: "/Applications/1Password.app"
-        pos: 10
+        pos: 9
       - name: Telegram
         path: "/Applications/Telegram.app"
-        pos: 11
+        pos: 10
       - name: Slack
         path: "/Applications/Slack.app"
-        pos: 12
+        pos: 11
       - name: Yaak
         path: "/Applications/Yaak.app"
-        pos: 13
+        pos: 12
       - name: TablePlus
         path: "/Applications/TablePlus.app"
-        pos: 14
+        pos: 13
       - name: System Preferences
         path: "/Applications/System Settings.app"
-        pos: 15
+        pos: 14
       - name: Infuse
         path: "/Applications/Infuse.app"
-        pos: 16
+        pos: 15
 
     pmset_options:
       - name: displaysleep
