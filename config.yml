@@ -59,6 +59,7 @@
       - cloudflared
       - vercel-cli
       - wireguard-tools
+      - docker
       - docker-compose
       - txn2/tap/kubefwd
       - helmfile
@@ -67,6 +68,7 @@
 
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
+      - jordanbaird-ice
       - ghostty
       - yaak
       - utm
@@ -77,7 +79,6 @@
       - zed
       - zed@preview
       - zen-browser
-      - docker
       - spotify
       - obsidian
       - discord@canary
@@ -85,7 +86,7 @@
       - private-internet-access
       - 1password@nightly
       - 1password-cli
-      - battery-buddy
+      - battery-buddy # TOOD: Make this not install on the mac mini
       - balenaetcher
       - figma
       - qflipper
@@ -122,6 +123,7 @@
     go_packages:
       - github.com/cespare/reflex@latest
 
+    ## TODO: Use our own local repository for dockutil, as I refuse to update something that works fine :)
     pkg_downloads:
       - url: https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3.0.2.pkg
         name: dockutil-3.0.2.pkg
