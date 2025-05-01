@@ -147,36 +147,39 @@
       - name: Spark
         path: "/Applications/Spark.app"
         pos: 5
+      - name: Obsidian
+        path: "/Applications/Obsidian.app"
+        pos: 6
       - name: Aptakube
         path: "/Applications/Aptakube.app"
-        pos: 6
+        pos: 7
       - name: Zen
         path: "/Applications/Zen.app"
-        pos: 7
+        pos: 8
       - name: Zed Preview
         path: "/Applications/Zed Preview.app"
-        pos: 8
+        pos: 9
       - name: 1Password
         path: "/Applications/1Password.app"
-        pos: 9
+        pos: 10
       - name: Telegram
         path: "/Applications/Telegram.app"
-        pos: 10
+        pos: 11
       - name: Slack
         path: "/Applications/Slack.app"
-        pos: 11
+        pos: 12
       - name: Yaak
         path: "/Applications/Yaak.app"
-        pos: 12
+        pos: 13
       - name: TablePlus
         path: "/Applications/TablePlus.app"
-        pos: 13
+        pos: 14
       - name: System Preferences
         path: "/Applications/System Settings.app"
-        pos: 14
+        pos: 15
       - name: Infuse
         path: "/Applications/Infuse.app"
-        pos: 15
+        pos: 16
 
     pmset_options:
       - name: displaysleep
