@@ -78,7 +78,7 @@
       - kubecontext
       - zed
       - zed@preview
-      - zen-browser
+      - firefox
       - spotify
       - obsidian
       - discord@canary
@@ -152,8 +152,8 @@
       - name: Aptakube
         path: "/Applications/Aptakube.app"
         pos: 7
-      - name: Zen
-        path: "/Applications/Zen.app"
+      - name: Firefox
+        path: "/Applications/Firefox.app"
         pos: 8
       - name: Zed Preview
         path: "/Applications/Zed Preview.app"
