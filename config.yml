@@ -79,6 +79,7 @@
       - zed
       - zed@preview
       - firefox
+      - firefox@nightly
       - spotify
       - obsidian
       - discord@canary
@@ -152,8 +153,8 @@
       - name: Aptakube
         path: "/Applications/Aptakube.app"
         pos: 7
-      - name: Firefox
-        path: "/Applications/Firefox.app"
+      - name: Firefox Nightly
+        path: "/Applications/Firefox Nightly.app"
         pos: 8
       - name: Zed Preview
         path: "/Applications/Zed Preview.app"
