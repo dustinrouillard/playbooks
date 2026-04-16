@@ -68,6 +68,7 @@
 
     homebrew_cask_appdir: /Applications
     homebrew_cask_apps:
+      - obs
       - jordanbaird-ice
       - ghostty
       - yaak
@@ -78,20 +79,16 @@
       - kubecontext
       - zed
       - zed@preview
-      - firefox
       - firefox@nightly
       - spotify
       - obsidian
       - discord@canary
-      - visual-studio-code@insiders
-      - private-internet-access
       - 1password@nightly
       - 1password-cli
       - battery-buddy # TOOD: Make this not install on the mac mini
       - balenaetcher
       - figma
       - qflipper
-      - philips-hue-sync
       - font-intel-one-mono
 
     dotfiles_repo: git@github.com:dustinrouillard/dotfiles.git
