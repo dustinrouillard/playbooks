@@ -83,6 +83,7 @@
       - spotify
       - obsidian
       - discord@canary
+      - discord@ptb
       - 1password@nightly
       - 1password-cli
       - battery-buddy # TOOD: Make this not install on the mac mini
@@ -90,6 +91,12 @@
       - figma
       - qflipper
       - font-intel-one-mono
+      - portkiller
+      - claude
+      - claude-code@latest
+      - chatgpt
+      - codex
+      - codexbar
 
     dotfiles_repo: git@github.com:dustinrouillard/dotfiles.git
     dotfiles_repo_accept_hostkey: true
@@ -108,9 +115,9 @@
       - .gnupg/gpg-agent.conf
       - .config/ghostty
 
-    default_node_version: "21"
+    default_node_version: "26"
     node_versions:
-      - "21"
+      - "26"
 
     node_global_packages:
       - npm-check-updates
@@ -141,39 +148,54 @@
       - name: Home
         path: "/Applications/Home.app"
         pos: 4
+      - name: Home Assistant
+        path: "/Users/dustin/Applications/Home Assistant.app"
+        pos: 5
+      - name: Frigate
+        path: "/Users/dustin/Applications/Frigate.app"
+        pos: 6
       - name: Spark
         path: "/Applications/Spark.app"
-        pos: 5
+        pos: 7
       - name: Obsidian
         path: "/Applications/Obsidian.app"
-        pos: 6
+        pos: 8
       - name: Aptakube
         path: "/Applications/Aptakube.app"
-        pos: 7
+        pos: 9
       - name: Firefox Nightly
         path: "/Applications/Firefox Nightly.app"
-        pos: 8
+        pos: 10
       - name: Zed Preview
         path: "/Applications/Zed Preview.app"
-        pos: 9
+        pos: 11
       - name: 1Password
         path: "/Applications/1Password.app"
-        pos: 10
+        pos: 12
       - name: Telegram
         path: "/Applications/Telegram.app"
-        pos: 11
+        pos: 13
+      - name: Claude
+        path: "/Applications/Claude.app"
+        pos: 14
+      - name: ChatGPT
+        path: "/Applications/ChatGPT.app"
+        pos: 15
       - name: Yaak
         path: "/Applications/Yaak.app"
-        pos: 12
+        pos: 16
       - name: TablePlus
         path: "/Applications/TablePlus.app"
-        pos: 13
+        pos: 17
       - name: System Preferences
         path: "/Applications/System Settings.app"
-        pos: 14
+        pos: 18
       - name: Infuse
         path: "/Applications/Infuse.app"
-        pos: 15
+        pos: 19
+      - name: Screen Sharing
+        path: "/System/Applications/Utilities/Screen Sharing.app"
+        pos: 20
 
     pmset_options:
       - name: displaysleep
