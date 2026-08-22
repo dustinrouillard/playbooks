@@ -2,8 +2,8 @@
 
   roles:
     - role: elliotweiser.osx-command-line-tools
-    - role: geerlingguy.mac.homebrew
-      tags: ["homebrew"]
+#    - role: geerlingguy.mac.homebrew
+#      tags: ["homebrew"]
     - role: geerlingguy.dotfiles
       tags: ["dotfiles"]
     - role: geerlingguy.mac.mas
@@ -25,8 +25,9 @@
     homebrew_taps:
       - txn2/tap
       - koekeishiya/formulae
+      - productdevbook/tap
 
-    homebrew_installed_packages:
+    x_homebrew_installed_packages:
       - zoxide
       - neovim
       - fnm
@@ -34,7 +35,7 @@
       - tmux
       - htop
       - fastfetch
-      - skhd
+      - asmvik/formulae/skhd
       - gpg
       - jq
       - go
@@ -67,7 +68,7 @@
       - age
 
     homebrew_cask_appdir: /Applications
-    homebrew_cask_apps:
+    x_homebrew_cask_apps:
       - obs
       - jordanbaird-ice
       - ghostty
@@ -204,6 +205,9 @@
     osx_script: "~/.osx"
 
   tasks:
+    - name: Brew - Temporary
+      ansible.builtin.import_tasks: tasks/brew.yml
+      tags: ["homebrew"]
     - import_tasks: tasks/osx.yml
       tags: ["osx"]
     - import_tasks: tasks/node.yml

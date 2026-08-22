@@ -1,0 +1,17 @@
+---
+
+- name: Install Homebrew
+  ansible.builtin.import_role:
+    name: geerlingguy.mac.homebrew
+
+- name: Trust Taps
+  ansible.builtin.command:
+    cmd: /opt/homebrew/bin/brew trust {{ item }}
+  loop: "{{ homebrew_taps }}"
+
+- name: Install Homebrew packages
+  ansible.builtin.import_role:
+    name: geerlingguy.mac.homebrew
+  vars:
+    homebrew_installed_packages: "{{ x_homebrew_installed_packages }}"
+    homebrew_cask_apps: "{{ x_homebrew_cask_apps }}"
